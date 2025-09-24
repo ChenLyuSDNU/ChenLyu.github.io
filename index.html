@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【你的名字】| 个人主页</title>
+    <meta name="description" content="【你的名字】的个人学术主页，包含研究兴趣、发表论文和最新动态。">
+    <!-- 引入外部CSS样式文件 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入Font Awesome图标库，用于显示邮件、GitHub等图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. 个人简介部分 -->
+        <header class="profile">
+            <!-- 请将 'profile.jpg' 替换成你的照片文件名，并确保照片文件和index.html在同一目录下 -->
+            <img src="profile.jpg" alt="【你的名字】" class="profile-photo">
+            <div class="profile-info">
+                <h1>【你的名字】 (Your Name)</h1>
+                <p><strong>【你的职位】</strong>, 【你的院系】</p>
+                <p><strong>【你的大学或研究机构】</strong></p>
+                <p class="bio">
+                    <!-- 在这里写一段简短的自我介绍，例如你的研究方向和目标 -->
+                    我是一名专注于【你的研究领域，如：机器学习、计算机视觉、自然语言处理】的研究者。我的研究重点是【更具体的研究方向，如：可解释性人工智能、小样本学习等】。
+                </p>
+                <div class="social-links">
+                    <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i> 邮箱</a>
+                    <a href="【你的简历PDF链接】" target="_blank"><i class="fas fa-file-pdf"></i> 简历 (CV)</a>
+                    <a href="【你的Google Scholar链接】" target="_blank"><i class="fas fa-graduation-cap"></i> 谷歌学术</a>
+                    <a href="https://github.com/【你的GitHub用户名】" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="【你的LinkedIn链接】" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- 2. 研究兴趣部分 -->
+            <section id="research">
+                <h2><i class="fas fa-flask"></i> 研究兴趣</h2>
+                <ul>
+                    <!-- 在这里列出你的研究兴趣关键词 -->
+                    <li>机器学习 (Machine Learning)</li>
+                    <li>深度学习 (Deep Learning)</li>
+                    <li>计算机视觉 (Computer Vision)</li>
+                    <li>强化学习 (Reinforcement Learning)</li>
+                </ul>
+            </section>
+
+            <!-- 3. 发表论文部分 -->
+            <section id="publications">
+                <h2><i class="fas fa-book-open"></i> 发表论文</h2>
+                <p class="note">*代表通讯作者 (Corresponding Author)</p>
+                <div class="publication-item">
+                    <p>
+                        <strong>[1] 论文标题 (Paper Title)</strong><br>
+                        <em>作者A, <strong>你的名字</strong>, 作者C*</em><br>
+                        会议/期刊名称 (e.g., Proceedings of NeurIPS 2025), 2025.
+                    </p>
+                    <div class="pub-links">
+                        <a href="【论文PDF链接】" class="button" target="_blank">PDF</a>
+                        <a href="【代码仓库链接】" class="button" target="_blank">代码</a>
+                        <a href="【项目主页链接】" class="button" target="_blank">项目主页</a>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <p>
+                        <strong>[2] 另一篇论文标题 (Another Paper Title)</strong><br>
+                        <em>作者X, 作者Y, <strong>你的名字</strong></em><br>
+                        会议/期刊名称 (e.g., IEEE Transactions on Pattern Analysis and Machine Intelligence), 2024.
+                    </p>
+                    <div class="pub-links">
+                        <a href="#" class="button" target="_blank">PDF</a>
+                        <a href="#" class="button" target="_blank">代码</a>
+                    </div>
+                </div>
+                <!-- 您可以复制上面的 "publication-item" 块来添加更多论文 -->
+            </section>
+
+            <!-- 4. 新闻动态部分 -->
+            <section id="news">
+                <h2><i class="fas fa-bullhorn"></i> 新闻动态</h2>
+                <ul>
+                    <li><strong>2025-09:</strong> 我们的一篇论文被【会议名称，如 NeurIPS 2025】接收。</li>
+                    <li><strong>2025-07:</strong> 受邀在【会议/学校名称】做学术报告。</li>
+                    <li><strong>2025-05:</strong> 担任【期刊/会议名称】的审稿人。</li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- 5. 页脚部分 -->
+        <footer>
+            <p>&copy; 2025 【你的名字】. 最后更新于 2025年9月24日。</p>
+        </footer>
+    </div>
+
+</body>
+</html>
