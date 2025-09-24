@@ -1,171 +1,134 @@
-/* 全局样式和字体设置 */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-    color: #333;
+/* ---------- Base / tokens ---------- */
+:root{
+  --bg: #f6f7fb;
+  --panel: #ffffff;
+  --ink: #222;
+  --muted: #666;
+  --brand: #0b63f6;
+  --brand-ink: #0a3fb4;
+  --rule: #e9ecf2;
+  --shadow: 0 8px 24px rgba(0,0,0,.06);
+  --radius: 14px;
 }
 
-/* 页面主容器 */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+@media (prefers-color-scheme: dark) {
+  :root{
+    --bg: #0e1116;
+    --panel: #141922;
+    --ink: #eef0f4;
+    --muted: #a9b0bb;
+    --brand: #6aa8ff;
+    --brand-ink: #a6c6ff;
+    --rule: #1f2632;
+    --shadow: 0 8px 24px rgba(0,0,0,.4);
+  }
 }
 
-/* 个人简介区域 */
-.profile {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.65;
+  color:var(--ink);
+  background:var(--bg);
 }
 
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ddd;
+/* ---------- A11y ---------- */
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{position:static;width:auto;height:auto;padding:.5rem .75rem;background:#fffa;}
+
+/* ---------- Header / Nav ---------- */
+.site-header{
+  position: sticky; top: 0; z-index: 10;
+  background: var(--panel);
+  border-bottom: 1px solid var(--rule);
+  box-shadow: var(--shadow);
+}
+.site-header .wrap{
+  max-width: 980px; margin: 0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  padding: .6rem 1rem;
+}
+.brand{color:var(--ink); text-decoration:none; font-size:1.05rem}
+.site-nav a{
+  color:var(--muted); text-decoration:none; margin-left:1rem; font-weight:600;
+}
+.site-nav a:hover{color:var(--brand)}
+
+/* ---------- Container ---------- */
+.container{
+  max-width: 980px; margin: 28px auto; padding: 0 16px;
+  background: var(--panel); border-radius: var(--radius); box-shadow: var(--shadow);
 }
 
-.profile-info h1 {
-    margin: 0;
-    font-size: 2em;
-    color: #1a1a1a;
+/* ---------- Sections ---------- */
+.section{padding: 28px 28px 6px; border-top: 1px solid var(--rule);}
+.section:first-of-type{border-top:none}
+h1,h2,h3{line-height:1.25;margin:0 0 10px}
+h2{font-size:1.35rem;border-bottom:2px solid var(--brand);padding-bottom:.4rem;margin-bottom:1rem}
+p{margin:.5rem 0}
+
+/* ---------- Profile ---------- */
+.profile{display:grid;grid-template-columns: 180px 1fr; gap: 22px; padding: 28px}
+.profile-photo{
+  margin:0; align-self:start;
+  width:180px; height:180px; border-radius: 999px; overflow: hidden;
+  border: 4px solid var(--rule); background:#ddd;
+}
+.profile-photo img{width:100%; height:100%; object-fit:cover; display:block}
+.headline{font-size:1.8rem; margin: 0 0 .2rem}
+.role{color:var(--muted); margin:.2rem 0 .7rem}
+.affil{opacity:.9}
+.bio{margin-top:.4rem}
+.cta-row{margin-top: 12px}
+.btn{
+  display:inline-flex; align-items:center; gap:.4rem;
+  padding:.45rem .7rem; border-radius:10px; border:1px solid var(--rule);
+  text-decoration:none; color:var(--ink); background: #f3f5fb;
+  transition: all .2s ease;
+  margin-right:.45rem; font-weight:600; font-size:.92rem;
+}
+.btn:hover{transform:translateY(-1px); border-color:#c8d5ff}
+.btn.primary{background: var(--brand); color:#fff; border-color: transparent}
+.btn.primary:hover{background: var(--brand-ink)}
+.looking{margin-top:10px; font-weight:600}
+
+/* ---------- Lists ---------- */
+.bullets{padding-left: 1.1rem}
+.bullets li{margin: .35rem 0}
+
+/* ---------- Publications ---------- */
+.pub{margin: 14px 0 18px; padding-left: 12px; border-left: 3px solid var(--rule)}
+.pub h3{font-size:1.05rem; margin:0 0 .25rem}
+.pub .authors{color:var(--muted); margin:.1rem 0}
+.pub .venue{font-weight:600; color:#444; margin:.1rem 0}
+.pub .links{margin-top:.3rem}
+.tag{
+  display:inline-block; padding:.18rem .5rem; border-radius:999px;
+  background:#eef3ff; color:#2b47c6; text-decoration:none; font-size:.82rem; border:1px solid #dfe7ff;
 }
 
-.profile-info p {
-    margin: 5px 0;
-    color: #555;
+/* ---------- News timeline ---------- */
+.timeline{list-style:none; padding:0; margin:0}
+.timeline li{
+  padding: .35rem 0; border-bottom: 1px dashed var(--rule);
+}
+.timeline li:last-child{border-bottom:none}
+.timeline .date{
+  display:inline-block; width: 6.5rem; font-weight:700; color:#445; opacity:.9;
 }
 
-.profile-info .bio {
-    margin-top: 15px;
-    font-size: 0.95em;
+/* ---------- Footer ---------- */
+.footer{
+  padding: 24px 28px 28px; text-align:center; color:var(--muted);
+  border-top: 1px solid var(--rule);
 }
 
-/* 社交链接 */
-.social-links {
-    margin-top: 15px;
-}
-
-.social-links a {
-    text-decoration: none;
-    color: #007bff;
-    margin-right: 15px;
-    font-size: 0.9em;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: #0056b3;
-}
-
-.social-links i {
-    margin-right: 5px;
-}
-
-/* 内容区域通用样式 */
-section {
-    margin-bottom: 30px;
-}
-
-h2 {
-    font-size: 1.5em;
-    color: #333;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-h2 i {
-    margin-right: 10px;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-}
-
-/* 论文条目样式 */
-.publication-item {
-    margin-bottom: 25px;
-    padding-left: 10px;
-    border-left: 3px solid #eee;
-}
-
-.publication-item p {
-    margin: 0 0 10px 0;
-}
-
-.publication-item strong {
-    font-size: 1.1em;
-    color: #222;
-}
-
-.publication-item em {
-    color: #666;
-}
-
-.note {
-    font-size: 0.85em;
-    color: #777;
-    margin-top: -15px;
-}
-
-/* 论文链接按钮 */
-.pub-links .button {
-    display: inline-block;
-    background-color: #f0f0f0;
-    color: #333;
-    padding: 5px 12px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 0.85em;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.pub-links .button:hover {
-    background-color: #e0e0e0;
-    border-color: #ccc;
-}
-
-/* 页脚 */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-    font-size: 0.9em;
-    color: #888;
-}
-
-/* 响应式设计：针对小屏幕设备（如手机） */
-@media (max-width: 768px) {
-    .profile {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    .profile-info h1 {
-        font-size: 1.8em;
-    }
+/* ---------- Responsive ---------- */
+@media (max-width: 720px){
+  .profile{grid-template-columns: 1fr; text-align:left}
+  .profile-photo{justify-self:start}
+  .site-nav a{margin-left:.7rem}
 }
