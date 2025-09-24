@@ -1,99 +1,185 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【你的名字】| 个人主页</title>
-    <meta name="description" content="【你的名字】的个人学术主页，包含研究兴趣、发表论文和最新动态。">
-    <!-- 引入外部CSS样式文件 -->
-    <link rel="stylesheet" href="style.css">
-    <!-- 引入Font Awesome图标库，用于显示邮件、GitHub等图标 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chen Lyu | Academic Homepage</title>
+  <meta name="description" content="Chen Lyu (Shandong Normal University) — Trustworthy Code Generation, Repo-level Code Security, LLM Security for Code." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Chen Lyu | Academic Homepage">
+  <meta property="og:description" content="Trustworthy Code Generation · Repo-level Code Security · LLM Security for Code">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-github-username.github.io/">
+  <meta property="og:image" content="profile.jpg">
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Chen Lyu",
+    "affiliation": "Shandong Normal University",
+    "jobTitle": "Associate Professor",
+    "email": "mailto:lvchen@sdnu.edu.cn",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=OZ_NVPUAAAAJ&hl=en",
+      "https://github.com/your-github-username",
+      "https://www.linkedin.com/in/your-linkedin/"
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="container">
-        <!-- 1. 个人简介部分 -->
-        <header class="profile">
-            <!-- 请将 'profile.jpg' 替换成你的照片文件名，并确保照片文件和index.html在同一目录下 -->
-            <img src="profile.jpg" alt="【你的名字】" class="profile-photo">
-            <div class="profile-info">
-                <h1>【你的名字】 (Your Name)</h1>
-                <p><strong>【你的职位】</strong>, 【你的院系】</p>
-                <p><strong>【你的大学或研究机构】</strong></p>
-                <p class="bio">
-                    <!-- 在这里写一段简短的自我介绍，例如你的研究方向和目标 -->
-                    我是一名专注于【你的研究领域，如：机器学习、计算机视觉、自然语言处理】的研究者。我的研究重点是【更具体的研究方向，如：可解释性人工智能、小样本学习等】。
-                </p>
-                <div class="social-links">
-                    <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i> 邮箱</a>
-                    <a href="【你的简历PDF链接】" target="_blank"><i class="fas fa-file-pdf"></i> 简历 (CV)</a>
-                    <a href="【你的Google Scholar链接】" target="_blank"><i class="fas fa-graduation-cap"></i> 谷歌学术</a>
-                    <a href="https://github.com/【你的GitHub用户名】" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="【你的LinkedIn链接】" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                </div>
-            </div>
-        </header>
-
-        <main>
-            <!-- 2. 研究兴趣部分 -->
-            <section id="research">
-                <h2><i class="fas fa-flask"></i> 研究兴趣</h2>
-                <ul>
-                    <!-- 在这里列出你的研究兴趣关键词 -->
-                    <li>机器学习 (Machine Learning)</li>
-                    <li>深度学习 (Deep Learning)</li>
-                    <li>计算机视觉 (Computer Vision)</li>
-                    <li>强化学习 (Reinforcement Learning)</li>
-                </ul>
-            </section>
-
-            <!-- 3. 发表论文部分 -->
-            <section id="publications">
-                <h2><i class="fas fa-book-open"></i> 发表论文</h2>
-                <p class="note">*代表通讯作者 (Corresponding Author)</p>
-                <div class="publication-item">
-                    <p>
-                        <strong>[1] 论文标题 (Paper Title)</strong><br>
-                        <em>作者A, <strong>你的名字</strong>, 作者C*</em><br>
-                        会议/期刊名称 (e.g., Proceedings of NeurIPS 2025), 2025.
-                    </p>
-                    <div class="pub-links">
-                        <a href="【论文PDF链接】" class="button" target="_blank">PDF</a>
-                        <a href="【代码仓库链接】" class="button" target="_blank">代码</a>
-                        <a href="【项目主页链接】" class="button" target="_blank">项目主页</a>
-                    </div>
-                </div>
-                <div class="publication-item">
-                    <p>
-                        <strong>[2] 另一篇论文标题 (Another Paper Title)</strong><br>
-                        <em>作者X, 作者Y, <strong>你的名字</strong></em><br>
-                        会议/期刊名称 (e.g., IEEE Transactions on Pattern Analysis and Machine Intelligence), 2024.
-                    </p>
-                    <div class="pub-links">
-                        <a href="#" class="button" target="_blank">PDF</a>
-                        <a href="#" class="button" target="_blank">代码</a>
-                    </div>
-                </div>
-                <!-- 您可以复制上面的 "publication-item" 块来添加更多论文 -->
-            </section>
-
-            <!-- 4. 新闻动态部分 -->
-            <section id="news">
-                <h2><i class="fas fa-bullhorn"></i> 新闻动态</h2>
-                <ul>
-                    <li><strong>2025-09:</strong> 我们的一篇论文被【会议名称，如 NeurIPS 2025】接收。</li>
-                    <li><strong>2025-07:</strong> 受邀在【会议/学校名称】做学术报告。</li>
-                    <li><strong>2025-05:</strong> 担任【期刊/会议名称】的审稿人。</li>
-                </ul>
-            </section>
-        </main>
-
-        <!-- 5. 页脚部分 -->
-        <footer>
-            <p>&copy; 2025 【你的名字】. 最后更新于 2025年9月24日。</p>
-        </footer>
+  <!-- Sticky navigation -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#"><strong>Chen Lyu</strong></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
+  <main id="main" class="container">
+    <!-- Hero / About -->
+    <section id="about" class="profile">
+      <!-- PHOTO: replace profile.jpg with your image -->
+      <figure class="profile-photo">
+        <img src="profile.jpg" alt="Portrait of Chen Lyu" width="180" height="180">
+      </figure>
+
+      <div class="profile-info">
+        <h1 class="headline">Chen Lyu (吕晨)</h1>
+        <p class="role">
+          Associate Professor, School of Information Science & Engineering<br>
+          <span class="affil">Shandong Normal University</span>
+        </p>
+
+        <p class="bio">
+          I work at the intersection of <strong>intelligent software engineering</strong> and <strong>software security</strong>,
+          with a current focus on <strong>trustworthy code generation</strong>.
+          My group studies <em>white-box, auditable generation pipelines</em> that unify
+          <strong>correctness × efficiency × security × auditability</strong>,
+          embedding <em>decision &amp; evidence</em> into the generation process to move
+          from explainable to auditable code. We also build repo-level analyses and benchmarks
+          for <strong>LLM→CodeQL</strong> generation/evaluation and study <strong>LLM security for code</strong>.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:lvchen@sdnu.edu.cn" aria-label="Email"><i class="fa-solid fa-envelope"></i> Email</a>
+          <a class="btn" href="CV.pdf" target="_blank" rel="noopener" aria-label="CV (PDF)"><i class="fa-solid fa-file-pdf"></i> CV</a>
+          <a class="btn" href="https://scholar.google.com/citations?user=OZ_NVPUAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i> Scholar</a>
+          <a class="btn" href="https://github.com/your-github-username" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/your-linkedin/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+
+        <p class="looking">🚀 I’m open to motivated students and collaborators in trustworthy code generation, repo-level security, and LLM security for code.</p>
+      </div>
+    </section>
+
+    <!-- Research interests -->
+    <section id="research" class="section">
+      <h2><i class="fa-solid fa-flask"></i> Research</h2>
+      <ul class="bullets">
+        <li><strong>Trustworthy & Efficient Code Generation.</strong> High-performance, low-memory code generation; safety-aware decoding; <em>white-box</em> auditable pipelines (constrained decoding, rollback, candidate ranking, efficiency/security evaluation, evidence chains).</li>
+        <li><strong>Repo-level Code Security.</strong> Vulnerability detection at repository scale; <strong>LLM→CodeQL</strong> rule generation, repair, and evaluation; joint <em>coverage × quality</em> metrics and benchmarks.</li>
+        <li><strong>LLM Security for Code.</strong> Prompt-injection/jailbreak detection & defense; adversarial examples and data-poisoning robustness; exploit-chain generation & risk assessment; guardrails and red/blue teaming for code LLMs; policy-compliant output filtering.</li>
+        <li><strong>Deep Architectures & Applications.</strong> Transformer / Mamba / KAN optimization and deployment in <em>low-level vision</em> (super-resolution, denoising, dehazing, etc.).</li>
+      </ul>
+    </section>
+
+    <!-- Selected Publications -->
+    <section id="publications" class="section">
+      <h2><i class="fa-solid fa-book-open"></i> Selected Publications</h2>
+      <p class="note">* corresponding author.  A full list is on <a href="https://scholar.google.com/citations?user=OZ_NVPUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+
+      <article class="pub">
+        <h3>Ensembling Large Language Models for Code Vulnerability Detection: An Empirical Evaluation</h3>
+        <p class="authors">Zhihong Sun, Jia Li, Yao Wan, Chuanyi Li, Hongyu Zhang, Zhi Jin, Ge Li, Hong Liu, <strong>Chen Lyu*</strong>, Songlin Hu</p>
+        <p class="venue">arXiv:2509.12629, 2025</p>
+        <p class="links">
+          <a class="tag" href="https://arxiv.org/abs/2509.12629" target="_blank" rel="noopener">arXiv</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3>Sifting through the Chaff: On Utilizing Execution Feedback for Ranking the Generated Code Candidates</h3>
+        <p class="authors">Zhihong Sun, Yao Wan, Jia Li, Hongyu Zhang, Zhi Jin, Ge Li, <strong>Chen Lyu*</strong></p>
+        <p class="venue">ASE 2024 (CCF A)</p>
+      </article>
+
+      <article class="pub">
+        <h3>IRCoCo: Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion</h3>
+        <p class="authors">Bolun Li, Zhihong Sun, Tao Huang, Hongyu Zhang, Yao Wan, Ge Li, Zhi Jin, <strong>Chen Lyu*</strong></p>
+        <p class="venue">FSE 2024 (CCF A)</p>
+      </article>
+
+      <article class="pub">
+        <h3>KareCoder: A Knowledge-Enriched Code Generation System</h3>
+        <p class="authors">Tao Huang, Zhihong Sun, Zhi Jin, Ge Li, <strong>Chen Lyu*</strong></p>
+        <p class="venue">ICSE 2024 (CCF A)</p>
+      </article>
+
+      <article class="pub">
+        <h3>TACO: Topics in Algorithmic Code Generation Dataset</h3>
+        <p class="authors">Rongao Li, Jie Fu, Bowen Zhang, Tao Huang, Zhihong Sun, <strong>Chen Lyu*</strong>, Guang Liu, Zhi Jin, Ge Li</p>
+        <p class="venue">arXiv:2312.14852, 2023</p>
+        <p class="links">
+          <a class="tag" href="https://arxiv.org/abs/2312.14852" target="_blank" rel="noopener">arXiv</a>
+        </p>
+      </article>
+
+      <article class="pub">
+        <h3>Efficient Dynamic Evolution of Service Composition</h3>
+        <p class="authors"><strong>Chen Lyu</strong>, Wei Jiang, Jiye Wang, Guoliang Lu, Zhiyong Liu, Songlin Hu</p>
+        <p class="venue">IEEE Transactions on Services Computing, 2018 (CCF A)</p>
+      </article>
+
+      <article class="pub">
+        <h3>APISynth: A New Graph-Based API Recommender System</h3>
+        <p class="authors"><strong>Chen Lyu</strong>, Wei Jiang, Yue Liu, Songlin Hu</p>
+        <p class="venue">ICSE 2014 (demo), pp. 596–597 (CCF A)</p>
+      </article>
+    </section>
+
+    <!-- News -->
+    <section id="news" class="section">
+      <h2><i class="fa-solid fa-bullhorn"></i> News</h2>
+      <ul class="timeline">
+        <li><span class="date">Nov 2024</span> Invited talk at Huawei 2012 Lab (Compiler & Programming Languages LAB, Shanghai): <em>“New explorations in optimizing code recommendation models.”</em></li>
+        <li><span class="date">Oct 2024</span> Invited talk at ChinaSoft (Intelligent Software Development, Testing & Maintenance Forum): <em>“Complex Code Generation: Strategies for Improving Model Performance.”</em></li>
+        <li><span class="date">Sep 2024</span> <strong>RankEF</strong> (code re-ranking) accepted to <strong>ASE 2024</strong>. Congrats to Zhihong!</li>
+        <li><span class="date">Apr 2024</span> <strong>KareCoder</strong> accepted to <strong>ICSE 2024</strong>. Congrats to Tao Huang!</li>
+        <li><span class="date">Apr 2024</span> <strong>IRCoCo</strong> accepted to <strong>FSE 2024</strong>. Congrats to Bolun!</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2><i class="fa-solid fa-paper-plane"></i> Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:lvchen@sdnu.edu.cn">lvchen@sdnu.edu.cn</a></p>
+      <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=OZ_NVPUAAAAJ&hl=en" target="_blank" rel="noopener">OZ_NVPUAAAAJ</a></p>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Chen Lyu. Last updated <span id="last-updated"></span>.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Set current year and last-modified date
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const d = new Date(document.lastModified);
+    const fmt = d.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'2-digit'});
+    document.getElementById('last-updated').textContent = fmt;
+  </script>
 </body>
 </html>
