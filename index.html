@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chen Lyu | Academic Homepage</title>
   <meta name="description" content="Chen Lyu (Shandong Normal University) — Trustworthy Code Generation, Repo-level Code Security, LLM Security for Code." />
-  <link rel="stylesheet" href="style.css?v=20250924" />
+  <link rel="stylesheet" href="style.css?v=20250926" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -69,7 +69,7 @@
           <span class="affil">Shandong Normal University</span>
         </p>
 
-        <!-- ★ Epigraph -->
+        <!-- ★ The one-line epigraph you requested -->
         <p class="epigraph">
           From explainable to auditable code — guided by rules, measured by evidence.
           <span class="q-zh">（不以规矩，不能成方圆）</span>
@@ -113,11 +113,12 @@
       <h2><i class="fa-solid fa-book-open"></i> Selected Publications</h2>
       <p class="note">* corresponding author. A full list is on <a href="https://scholar.google.com/citations?user=OZ_NVPUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
 
-      <!-- ★ Legend -->
-      <p class="legend">
-        <span class="badge badge-ccf-a" aria-hidden="true"><i class="fa-solid fa-award"></i> CCF A</span>
-        <span class="legend-text">Top-ranked venues are highlighted.</span>
-      </p>
+      <!-- Optional legend -->
+      <div class="ccf-legend" aria-label="CCF ranking legend">
+        <span class="badge ccf-a" title="Top tier by CCF">CCF A</span>
+        <span class="badge ccf-b">CCF B</span>
+        <span class="badge ccf-c">CCF C</span>
+      </div>
 
       <!-- Toolbar -->
       <div class="pub-toolbar">
@@ -135,7 +136,7 @@
       <article class="pub" data-year="2025" data-venue="ASE" data-tags="constrained decoding, code generation" data-ccf="A">
         <h3>SemGuard: Real-Time Semantic Evaluator for Correcting LLM-Generated Code</h3>
         <p class="authors">Qinglin Wang, Zhihong Sun, Ruyun Wang, Tao Huang, Zhi Jin, Ge Li, <strong>Chen Lyu*</strong></p>
-        <p class="venue">ASE 2025 <span class="sep">•</span> <span class="badge badge-ccf-a" aria-label="CCF A-ranked venue"><i class="fa-solid fa-award" aria-hidden="true"></i> CCF A</span></p>
+        <p class="venue">ASE 2025 <span class="badge ccf-a">CCF A</span></p>
         <p class="links">
           <button class="mini-btn" data-abs="Real-Time Semantic Evaluator for Correcting LLM-Generated Code.">Abstract</button>
           <button class="mini-btn" data-bib='@inproceedings{Wang2025SemGuard, title={SemGuard: Real-Time Semantic Evaluator for Correcting LLM-Generated Code}, author={Wang Qinglin, Sun Zhihong, Wang Ruyun, Huang Tao, Jin Zhi, Li Ge and Lyu Chen}, booktitle={ASE}, year={2025}}'>BibTeX</button>
@@ -156,7 +157,7 @@
       <article class="pub" data-year="2024" data-venue="ASE" data-tags="execution feedback, ranking, code generation" data-ccf="A">
         <h3>Sifting through the Chaff: On Utilizing Execution Feedback for Ranking the Generated Code Candidates</h3>
         <p class="authors">Zhihong Sun, Yao Wan, Jia Li, Hongyu Zhang, Zhi Jin, Ge Li, <strong>Chen Lyu*</strong></p>
-        <p class="venue">ASE 2024 <span class="sep">•</span> <span class="badge badge-ccf-a" aria-label="CCF A-ranked venue"><i class="fa-solid fa-award"></i> CCF A</span></p>
+        <p class="venue">ASE 2024 <span class="badge ccf-a">CCF A</span></p>
         <p class="links">
           <button class="mini-btn" data-abs="Leverages execution feedback to rank multiple generated code candidates, improving correctness under constrained budgets.">Abstract</button>
           <button class="mini-btn" data-bib='@inproceedings{Sun2024RankEF, title={Sifting through the Chaff: On Utilizing Execution Feedback for Ranking the Generated Code Candidates}, author={Sun, Zhihong and Wan, Yao and Li, Jia and Zhang, Hongyu and Jin, Zhi and Li, Ge and Lyu, Chen}, booktitle={ASE}, year={2024}}'>BibTeX</button>
@@ -166,7 +167,7 @@
       <article class="pub" data-year="2024" data-venue="FSE" data-tags="reinforcement learning, code completion" data-ccf="A">
         <h3>IRCoCo: Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion</h3>
         <p class="authors">Bolun Li, Zhihong Sun, Tao Huang, Hongyu Zhang, Yao Wan, Ge Li, Zhi Jin, <strong>Chen Lyu*</strong></p>
-        <p class="venue">FSE 2024 <span class="sep">•</span> <span class="badge badge-ccf-a" aria-label="CCF A-ranked venue"><i class="fa-solid fa-award"></i> CCF A</span></p>
+        <p class="venue">FSE 2024 <span class="badge ccf-a">CCF A</span></p>
         <p class="links">
           <button class="mini-btn" data-abs="Introduces immediate reward shaping for code completion, yielding stable training and improved suggestion quality.">Abstract</button>
           <button class="mini-btn" data-bib='@inproceedings{Li2024IRCoCo, title={IRCoCo: Immediate Rewards-Guided Deep Reinforcement Learning for Code Completion}, author={Li, Bolun and Sun, Zhihong and Huang, Tao and Zhang, Hongyu and Wan, Yao and Li, Ge and Jin, Zhi and Lyu, Chen}, booktitle={FSE}, year={2024}}'>BibTeX</button>
@@ -176,7 +177,7 @@
       <article class="pub" data-year="2024" data-venue="ICSE" data-tags="knowledge, code generation, system" data-ccf="A">
         <h3>KareCoder: A Knowledge-Enriched Code Generation System</h3>
         <p class="authors">Tao Huang, Zhihong Sun, Zhi Jin, Ge Li, <strong>Chen Lyu*</strong></p>
-        <p class="venue">ICSE 2024 <span class="sep">•</span> <span class="badge badge-ccf-a" aria-label="CCF A-ranked venue"><i class="fa-solid fa-award"></i> CCF A</span></p>
+        <p class="venue">ICSE 2024 <span class="badge ccf-a">CCF A</span></p>
         <p class="links">
           <button class="mini-btn" data-abs="A system that injects structured knowledge into code generation, enhancing reliability and task success rates.">Abstract</button>
           <button class="mini-btn" data-bib='@inproceedings{Huang2024KareCoder, title={KareCoder: A Knowledge-Enriched Code Generation System}, author={Huang, Tao and Sun, Zhihong and Jin, Zhi and Li, Ge and Lyu, Chen}, booktitle={ICSE}, year={2024}}'>BibTeX</button>
@@ -197,13 +198,13 @@
       <article class="pub" data-year="2018" data-venue="IEEE TSC" data-tags="services computing, evolution" data-ccf="A">
         <h3>Efficient Dynamic Evolution of Service Composition</h3>
         <p class="authors"><strong>Chen Lyu</strong>, Wei Jiang, Jiye Wang, Guoliang Lu, Zhiyong Liu, Songlin Hu</p>
-        <p class="venue">IEEE Transactions on Services Computing, 2018 <span class="sep">•</span> <span class="badge badge-ccf-a" aria-label="CCF A-ranked venue"><i class="fa-solid fa-award"></i> CCF A</span></p>
+        <p class="venue">IEEE Transactions on Services Computing <span class="badge ccf-a">CCF A</span>, 2018</p>
       </article>
 
       <article class="pub" data-year="2014" data-venue="ICSE" data-tags="API, recommendation, graph" data-ccf="A">
         <h3>APISynth: A New Graph-Based API Recommender System</h3>
         <p class="authors"><strong>Chen Lyu</strong>, Wei Jiang, Yue Liu, Songlin Hu</p>
-        <p class="venue">ICSE 2014 <span class="sep">•</span> <span class="badge badge-ccf-a" aria-label="CCF A-ranked venue"><i class="fa-solid fa-award"></i> CCF A</span></p>
+        <p class="venue">ICSE 2014 <span class="badge ccf-a">CCF A</span></p>
       </article>
     </section>
 
@@ -288,7 +289,7 @@
     const root = document.documentElement;
     const btnTheme = document.getElementById('themeToggle');
     const applyTheme = (mode) => {
-      root.setAttribute('data-theme', mode);
+      root.setAttribute('data-theme', mode);       // 'auto' | 'light' | 'dark'
       localStorage.setItem('theme', mode);
       btnTheme.title = 'Theme: ' + mode[0].toUpperCase() + mode.slice(1);
     };
@@ -297,7 +298,7 @@
     applyTheme(init);
     btnTheme?.addEventListener('click', () => { init = cycle[init]; applyTheme(init); });
 
-    // On-scroll reveal
+    // On-scroll reveal (respect prefers-reduced-motion)
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!prefersReduced) {
       const revealEls = document.querySelectorAll('.section, .pub, .timeline li');
@@ -374,6 +375,7 @@
   </script>
 </body>
 </html>
+
 
 
 
