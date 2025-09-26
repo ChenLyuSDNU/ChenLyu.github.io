@@ -94,17 +94,52 @@ h1,h2,h3{line-height:1.25;margin:0 0 10px}
 h2{font-size:1.35rem;border-bottom:2px solid var(--brand);padding-bottom:.4rem;margin-bottom:1rem}
 p{margin:.5rem 0}
 
-/* ---------- Profile ---------- */
-.profile{display:grid;grid-template-columns: 180px 1fr; gap: 22px; padding: 28px}
-.profile-photo{
-  margin:0; align-self:start;
-  width:180px; height:180px; border-radius: 999px; overflow: hidden;
-  border: 4px solid var(--rule); background:#ddd;
+/* Profile 区域：左图右文，左列宽度可在 240–320px 自适应 */
+.profile{
+  display:grid;
+  grid-template-columns: minmax(240px, 320px) 1fr;
+  gap: 22px;
+  padding: 28px;
 }
-.profile-photo img{width:100%; height:100%; object-fit:cover; display:block}
-.headline{font-size:1.8rem; margin: 0 0 .2rem}
-.role{color:var(--muted); margin:.2rem 0 .5rem}
-.affil{opacity:.9}
+
+/* 头像容器：默认使用矩形比例，由形状类决定 aspect-ratio 与圆角 */
+.profile-photo{
+  margin:0; 
+  align-self:start;
+  width:100%;
+  aspect-ratio: 4 / 3;        /* 默认矩形比例，可被形状类覆盖 */
+  border-radius: 16px;         /* 默认圆角矩形 */
+  overflow: hidden;
+  border: 4px solid var(--rule);
+  background:#ddd;
+}
+
+/* 头像图片：铺满容器，不变形，自动居中裁切 */
+.profile-photo img{
+  width:100%;
+  height:100%;
+  object-fit: cover;           /* 保持比例，铺满容器 */
+  object-position: 50% 50%;    /* 如需把人脸稍微上移，可改为 50% 35% */
+  display:block;
+}
+
+/* —— 可选的形状类（只改类名即可切换形状） —— */
+.photo--rect{        aspect-ratio: 4 / 3;  border-radius: 16px;   } /* 横向矩形（推荐） */
+.photo--tall{        aspect-ratio: 3 / 4;  border-radius: 16px;   } /* 竖向矩形（证件照比例） */
+.photo--circle{      aspect-ratio: 1 / 1;  border-radius: 999px;  } /* 圆形（旧样式） */
+.photo--wide{        aspect-ratio: 16 / 9; border-radius: 14px;   } /* 横幅（更“横屏”） */
+
+/* 横幅时，让图片占满整个顶部（可选） */
+@media (min-width: 721px){
+  .profile-photo.photo--wide{ grid-column: 1 / -1; } /* 跨两列，做大横幅 */
+}
+
+/* 移动端优化：单列排版，头像不显得过大 */
+@media (max-width: 720px){
+  .profile{ grid-template-columns: 1fr; }
+  .profile-photo{ max-width: 360px; }   /* 可按需调整 */
+}
+
 
 /* ★ Epigraph (subtitle) */
 .epigraph{
