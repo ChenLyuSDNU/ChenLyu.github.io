@@ -365,6 +365,26 @@
     emailBtn?.addEventListener('click', async () => {
       try { await navigator.clipboard.writeText('lvchen@sdnu.edu.cn'); emailBtn.classList.add('copied'); setTimeout(()=>emailBtn.classList.remove('copied'), 1200);} catch {}
     });
+    <script>
+  // === Auto-badge CCF ranks in .venue ===
+  document.querySelectorAll('.pub .venue').forEach(el => {
+    let html = el.innerHTML;
+    // 把 (CCF A/B/C) 替换为彩色徽章
+    html = html
+      .replace(/\(CCF\s*A\)/ig, '<span class="badge ccf-a" title="CCF Rank A"><i class="fa-solid fa-award"></i> CCF A</span>')
+      .replace(/\(CCF\s*B\)/ig, '<span class="badge ccf-b" title="CCF Rank B">CCF B</span>')
+      .replace(/\(CCF\s*C\)/ig, '<span class="badge ccf-c" title="CCF Rank C">CCF C</span>');
+    el.innerHTML = html;
+
+    // 如果含有 A 级徽章，则给整条论文卡片加轻量高亮
+    if (el.querySelector('.ccf-a')) {
+      el.closest('.pub')?.classList.add('pub-top');
+    }
+  });
+</script>
+
+
+    
   </script>
 </body>
 </html>
